@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.github.paolorotolo.appintro.AppIntro;
+
 public class App_Activity  extends AppIntro {
 
     // Please DO NOT override onCreate. Use init.
@@ -30,7 +32,7 @@ public class App_Activity  extends AppIntro {
 
     //
     private void loadMainActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
     @Override

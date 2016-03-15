@@ -3,7 +3,7 @@
 android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="@color/colorPrimaryDark"
+android:background="#fff"
     >
 
 
@@ -13,7 +13,7 @@ android:background="@color/colorPrimaryDark"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:text="First Slide"
     android:id="@+id/textView"
-    android:textColor="@color/colorPrimary"
+    android:textColor="#85c449"
     android:textSize="50dp"
     android:layout_above="@+id/imageView"
     android:layout_centerHorizontal="true" />
