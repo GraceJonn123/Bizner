@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
-public class App_Activity extends AppIntro {
+public class App_Activity  extends AppIntro {
 
     // Please DO NOT override onCreate. Use init.
     @Override
@@ -21,42 +21,28 @@ public class App_Activity extends AppIntro {
         addSlide(SampleSlide.newInstance(R.layout.first_fragment));
         addSlide(SampleSlide.newInstance(R.layout.second_fragment));
         addSlide(SampleSlide.newInstance(R.layout.third_fragment));
-//        addSlide(first_fragment);
-//        addSlide(second_fragment);
-//        addSlide(third_fragment);
 
-        // Instead of fragments, you can also use our default slide
-        // Just set a title, description, background and image. AppIntro will do the rest.
-//        addSlide(AppIntroFragment.newInstance(title, description, image, background_colour));
+        // SHOW or HIDE the status bar
+        showStatusBar(true);
+        // Hide Skip/Done button
+        showSkipButton(true);
+        showDoneButton(true);
 
-        // OPTIONAL METHODS
-        // Override bar/separator color.
-        setBarColor(Color.parseColor("#3F51B5"));
-        setSeparatorColor(Color.parseColor("#2196F3"));
 
-        // Hide Skip/Done button.
-        showSkipButton(false);
-        setProgressButtonEnabled(false);
-
-        // Turn vibration on and set intensity.
-        // NOTE: you will probably need to ask VIBRATE permisssion in Manifest.
-        setVibrate(true);
-        setVibrateIntensity(30);
+        // Animations -- use only one of the below. Using both could cause errors.
+        setFadeAnimation();
     }
 
+    //
+    private void loadMainActivity(){
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
     @Override
     public void onSkipPressed() {
         // Do something when users tap on Skip button.
-    }
-
-    @Override
-    public void onDonePressed() {
-        // Do something when users tap on Done button.
-    }
-
-    @Override
-    public void onSlideChanged() {
-        // Do something when the slide changes.
+        loadMainActivity();
+        Toast.makeText(getApplicationContext(), getString(R.string.skip), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -64,4 +50,15 @@ public class App_Activity extends AppIntro {
         // Do something when users tap on Next button.
     }
 
+    @Override
+    public void onDonePressed() {
+        // Do something when users tap on Done button.
+        loadMainActivity();
+
+    }
+
+    @Override
+    public void onSlideChanged() {
+        // Do something when slide is changed
+    }
 }

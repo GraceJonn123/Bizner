@@ -20,6 +20,7 @@ android {
 }
 repositories {
     mavenCentral()
+    maven { url 'http://dl.bintray.com/madcyph3r/maven/' }
 
 }
 
@@ -28,4 +29,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.github.paolorotolo:appintro:3.4.0'
+    compile 'de.madcyph3r:materialDrawer:2.0.0@aar'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.nineoldandroids:library:2.4.0'
+
 }
