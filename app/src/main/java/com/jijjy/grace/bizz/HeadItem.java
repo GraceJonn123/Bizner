@@ -42,9 +42,9 @@ public class HeadItem extends MaterialNavHeadItemActivity {
         // create menu
         MaterialMenu menu = new MaterialMenu();
         menu.add(new MaterialItemSectionFragment(this, "Home", fragmentInstruction, "Head Item Style (One Item)"));
-        menu.add(new MaterialItemSectionFragment(this, "About Bizner", new FragmentDummy(), "About Bizner"));
-        menu.add(new MaterialItemSectionFragment(this, "Contact Info", new FragmentDummy(), "Contact Info"));
-        menu.add(new MaterialItemSectionFragment(this, "What to expect", new FragmentDummy(), "What to expect"));
+        menu.add(new MaterialItemSectionFragment(this, "About Bizner", new About(), "About Bizner"));
+        menu.add(new MaterialItemSectionFragment(this, "Contact Info", new COntacts(), "Contact Info"));
+        menu.add(new MaterialItemSectionFragment(this, "What to expect", new Wte(), "What to expect"));
 
         // create Head Item
         // use bitmap and make a circle photo

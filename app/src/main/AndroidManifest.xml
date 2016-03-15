@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".HeadItem" />
-        <activity android:name=".About"></activity>
+        <activity android:name=".About" />
+        <activity android:name=".Wte" />
+        <activity android:name=".COntacts"></activity>
     </application>
 
 </manifest>
